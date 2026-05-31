@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://bpu63gkkg4cjy" path="res://Scenes/DungeonThings/mapTile.tscn" id="1_gjp5b"]
 [ext_resource type="Script" uid="uid://vx2rkbotp6eb" path="res://Scenes/DungeonThings/placeableTile.gd" id="1_pw111"]
 
-[node name="PlaceableTile" type="Node2D"]
+[node name="PlaceableTile" type="Node2D" unique_id=565819171]
 script = ExtResource("1_pw111")
 
-[node name="FrameTileSlot" parent="." instance=ExtResource("1_gjp5b")]
+[node name="FrameTileSlot" parent="." unique_id=1532020654 instance=ExtResource("1_gjp5b")]
 
-[node name="count" type="Label" parent="FrameTileSlot"]
+[node name="count" type="Label" parent="FrameTileSlot" unique_id=696500875]
 offset_left = -16.0
 offset_top = 16.0
 offset_right = 16.0

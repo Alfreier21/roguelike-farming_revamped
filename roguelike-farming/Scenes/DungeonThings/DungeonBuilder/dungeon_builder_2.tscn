@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bcbs2jhmts624"]
+
+[ext_resource type="Script" uid="uid://bho7xb3gaev6s" path="res://Scripts/DungeonThings/DungeonBuilder/dungeon_builder_2.gd" id="1_fx6j6"]
+[ext_resource type="PackedScene" uid="uid://cq2582saxo87m" path="res://Scenes/DungeonThings/DungeonBuilder/grid_tile.tscn" id="2_aexrw"]
+[ext_resource type="PackedScene" uid="uid://dl3b5bhnb2st1" path="res://Scenes/DungeonThings/DungeonBuilder/placeable_tile_2.tscn" id="2_ojyk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojyk3"]
+bg_color = Color(0.6, 0.22745098, 0.6, 1)
+
+[node name="DungeonBuilder2" type="Node" unique_id=1197291144]
+script = ExtResource("1_fx6j6")
+
+[node name="BaseTileFrame" type="Node2D" parent="." unique_id=685452314]
+
+[node name="Background for Test" type="Panel" parent="BaseTileFrame" unique_id=693955640]
+offset_right = 332.0
+offset_bottom = 280.0
+
+[node name="GridTile" parent="BaseTileFrame/Background for Test" unique_id=50612424 instance=ExtResource("2_aexrw")]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 96.0
+offset_right = 180.0
+offset_bottom = 128.0
+
+[node name="GridTile2" parent="BaseTileFrame/Background for Test" unique_id=1741570355 instance=ExtResource("2_aexrw")]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 128.0
+offset_right = 180.0
+offset_bottom = 160.0
+
+[node name="TileSelection" type="CanvasLayer" parent="." unique_id=54679029]
+
+[node name="Panel" type="Panel" parent="TileSelection" unique_id=1050820919]
+offset_left = 1.0
+offset_top = 281.0
+offset_right = 641.0
+offset_bottom = 361.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ojyk3")
+
+[node name="MapTile2" parent="TileSelection/Panel" unique_id=235767744 instance=ExtResource("2_ojyk3")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = 21.0
+offset_top = 19.0
+offset_right = 53.0
+offset_bottom = 51.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1645804245]
+position = Vector2(320, 180)
+
+[connection signal="button_down" from="TileSelection/Panel/MapTile2" to="." method="_on_map_tile_2_button_down"]
+[connection signal="button_up" from="TileSelection/Panel/MapTile2" to="." method="_on_map_tile_2_button_up"]
