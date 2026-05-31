@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bvn8ulb8gj2af" path="res://Scenes/DungeonThings/DungeonBuilder/tile_visualisation.tscn" id="2_rkyrd"]
 
 [node name="PlaceableTile2" type="TextureButton" unique_id=235767744]
+custom_minimum_size = Vector2(32, 32)
 anchors_preset = -1
 offset_left = -16.0
 offset_top = -16.0
@@ -11,6 +12,7 @@ offset_right = 16.0
 offset_bottom = 16.0
 pivot_offset = Vector2(16, 16)
 size_flags_horizontal = 4
+mouse_behavior_recursive = 2
 script = ExtResource("1_jtfwq")
 
 [node name="TileVisualisation" parent="." unique_id=649310393 instance=ExtResource("2_rkyrd")]

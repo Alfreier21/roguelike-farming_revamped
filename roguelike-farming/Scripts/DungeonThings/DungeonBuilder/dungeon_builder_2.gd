@@ -32,9 +32,11 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			camera_2d.zoom += Vector2(-0.1, -0.1)
 
-func _on_map_tile_2_button_down() -> void:
+
+
+
+func _on_tile_selection_dragging_tile() -> void:
 	dragging_tile = true
 
-
-func _on_map_tile_2_button_up() -> void:
+func _on_tile_selection_stopped_dragging_tile() -> void:
 	dragging_tile = false

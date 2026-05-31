@@ -22,11 +22,17 @@ func _process(delta: float) -> void:
 	pass
 
 
+func setTile(data: Tile_Data) -> void:
+	tile_visualisation.setTile(data)
+
+	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and is_dragging:
 		position += event.relative
 
 func _on_button_down() -> void:
+	snapback_pos = position
+	print("Got signal")
 	is_dragging = true
 
 func _on_button_up() -> void:
