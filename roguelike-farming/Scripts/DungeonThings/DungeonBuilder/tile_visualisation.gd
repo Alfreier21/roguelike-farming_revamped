@@ -19,6 +19,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func setTile(data: Tile_Data) -> void: 
+	tile_data = data
+	createVisualisation() 
+
 func rotateTile() -> void: 
 	tile_data.rotateTile()
 

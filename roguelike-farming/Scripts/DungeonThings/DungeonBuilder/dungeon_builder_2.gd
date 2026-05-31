@@ -2,6 +2,7 @@ class_name DungeonBuilder2
 extends Node
 
 @onready var camera_2d: Camera2D = $Camera2D
+#@onready var background_for_test: Panel = $"Background for Test"
 
 #selectable Tiles should be able 
 var dragging_tile : bool = false
@@ -19,13 +20,17 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	if event is InputEventMouseMotion and dragging_frame and !dragging_tile:
-		camera_2d.global_position -= event.relative
+		camera_2d.global_position -= event.relative * (1/camera_2d.zoom.x)
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 			dragging_frame = true
 		else: 
 			dragging_frame = false
-			
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			camera_2d.zoom += Vector2(0.1, 0.1)
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			camera_2d.zoom += Vector2(-0.1, -0.1)
 
 func _on_map_tile_2_button_down() -> void:
 	dragging_tile = true
