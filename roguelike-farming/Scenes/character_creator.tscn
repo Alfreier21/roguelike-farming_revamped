@@ -58,7 +58,7 @@ region = Rect2(1728, 131, 47, 12)
 atlas = ExtResource("5_borl1")
 region = Rect2(1680, 130, 47, 13)
 
-[node name="Character Creator" type="Control"]
+[node name="Character Creator" type="Control" unique_id=76724725]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,7 +69,7 @@ script = ExtResource("1_cnjwq")
 farming_base_path = "uid://fxs7rd0ibiyw"
 metadata/_edit_lock_ = true
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1512584492]
 custom_minimum_size = Vector2(640, 360)
 layout_mode = 1
 offset_right = 640.0
@@ -77,7 +77,7 @@ offset_bottom = 360.0
 texture = SubResource("AtlasTexture_uw8xy")
 metadata/_edit_lock_ = true
 
-[node name="CharacterBackground" type="TextureRect" parent="Background"]
+[node name="CharacterBackground" type="TextureRect" parent="Background" unique_id=335927609]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -93,54 +93,54 @@ grow_vertical = 2
 texture = SubResource("AtlasTexture_k4e76")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="Background"]
+[node name="Label" type="Label" parent="Background" unique_id=929828099]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Skeleton" type="Node2D" parent="."]
+[node name="Skeleton" type="Node2D" parent="." unique_id=1707039153]
 position = Vector2(479, 184)
 scale = Vector2(3, 3)
 metadata/_edit_lock_ = true
 
-[node name="Body" type="Sprite2D" parent="Skeleton"]
+[node name="Body" type="Sprite2D" parent="Skeleton" unique_id=593734385]
 texture = ExtResource("2_cnjwq")
 hframes = 9
 vframes = 56
 metadata/_edit_lock_ = true
 
-[node name="Chest" type="Sprite2D" parent="Skeleton"]
+[node name="Chest" type="Sprite2D" parent="Skeleton" unique_id=2109467033]
 hframes = 9
 vframes = 56
 metadata/_edit_lock_ = true
 
-[node name="Hair" type="Sprite2D" parent="Skeleton"]
+[node name="Hair" type="Sprite2D" parent="Skeleton" unique_id=967972338]
 hframes = 9
 vframes = 56
 metadata/_edit_lock_ = true
 
-[node name="Legs" type="Sprite2D" parent="Skeleton"]
+[node name="Legs" type="Sprite2D" parent="Skeleton" unique_id=95149887]
 hframes = 9
 vframes = 56
 metadata/_edit_lock_ = true
 
-[node name="Hands" type="Sprite2D" parent="Skeleton"]
+[node name="Hands" type="Sprite2D" parent="Skeleton" unique_id=290680539]
 texture = ExtResource("6_7m4tv")
 hframes = 9
 vframes = 56
 metadata/_edit_lock_ = true
 
-[node name="Feet" type="Sprite2D" parent="Skeleton"]
+[node name="Feet" type="Sprite2D" parent="Skeleton" unique_id=1552704738]
 hframes = 9
 vframes = 56
 metadata/_edit_lock_ = true
 
-[node name="Accessory" type="Sprite2D" parent="Skeleton"]
+[node name="Accessory" type="Sprite2D" parent="Skeleton" unique_id=1672605376]
 hframes = 9
 vframes = 56
 metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=321362077]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -156,11 +156,11 @@ grow_vertical = 2
 theme_override_constants/separation = 24
 metadata/_edit_lock_ = true
 
-[node name="AccessoryController" type="HBoxContainer" parent="VBoxContainer"]
+[node name="AccessoryController" type="HBoxContainer" parent="VBoxContainer" unique_id=3028641]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="PreviousAccessoryButton" type="TextureButton" parent="VBoxContainer/AccessoryController"]
+[node name="PreviousAccessoryButton" type="TextureButton" parent="VBoxContainer/AccessoryController" unique_id=864561837]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_ako4q")
@@ -168,12 +168,12 @@ texture_pressed = SubResource("AtlasTexture_afg0v")
 texture_hover = SubResource("AtlasTexture_cnjwq")
 stretch_mode = 0
 
-[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/AccessoryController"]
+[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/AccessoryController" unique_id=796269464]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 texture = SubResource("AtlasTexture_nr05l")
 
-[node name="Label" type="Label" parent="VBoxContainer/AccessoryController/LabelBackground"]
+[node name="Label" type="Label" parent="VBoxContainer/AccessoryController/LabelBackground" unique_id=415178813]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -191,7 +191,7 @@ theme_override_fonts/font = ExtResource("7_borl1")
 theme_override_font_sizes/font_size = 30
 text = "Accessory"
 
-[node name="NextAccessoryButton" type="TextureButton" parent="VBoxContainer/AccessoryController"]
+[node name="NextAccessoryButton" type="TextureButton" parent="VBoxContainer/AccessoryController" unique_id=2120993670]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_borl1")
@@ -199,11 +199,11 @@ texture_pressed = SubResource("AtlasTexture_7m4tv")
 texture_hover = SubResource("AtlasTexture_edvgk")
 stretch_mode = 1
 
-[node name="HairController" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HairController" type="HBoxContainer" parent="VBoxContainer" unique_id=1425518571]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="PreviousHairButton" type="TextureButton" parent="VBoxContainer/HairController"]
+[node name="PreviousHairButton" type="TextureButton" parent="VBoxContainer/HairController" unique_id=539989133]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_ako4q")
@@ -211,12 +211,12 @@ texture_pressed = SubResource("AtlasTexture_afg0v")
 texture_hover = SubResource("AtlasTexture_cnjwq")
 stretch_mode = 0
 
-[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/HairController"]
+[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/HairController" unique_id=825679978]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 texture = SubResource("AtlasTexture_nr05l")
 
-[node name="Label" type="Label" parent="VBoxContainer/HairController/LabelBackground"]
+[node name="Label" type="Label" parent="VBoxContainer/HairController/LabelBackground" unique_id=1840649607]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -234,7 +234,7 @@ theme_override_fonts/font = ExtResource("7_borl1")
 theme_override_font_sizes/font_size = 30
 text = "Hair"
 
-[node name="NextHairButton" type="TextureButton" parent="VBoxContainer/HairController"]
+[node name="NextHairButton" type="TextureButton" parent="VBoxContainer/HairController" unique_id=1520032025]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_borl1")
@@ -242,11 +242,11 @@ texture_pressed = SubResource("AtlasTexture_7m4tv")
 texture_hover = SubResource("AtlasTexture_edvgk")
 stretch_mode = 1
 
-[node name="ChestController" type="HBoxContainer" parent="VBoxContainer"]
+[node name="ChestController" type="HBoxContainer" parent="VBoxContainer" unique_id=383521911]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="PreviousChestButton" type="TextureButton" parent="VBoxContainer/ChestController"]
+[node name="PreviousChestButton" type="TextureButton" parent="VBoxContainer/ChestController" unique_id=1438374386]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_ako4q")
@@ -254,12 +254,12 @@ texture_pressed = SubResource("AtlasTexture_afg0v")
 texture_hover = SubResource("AtlasTexture_cnjwq")
 stretch_mode = 0
 
-[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/ChestController"]
+[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/ChestController" unique_id=1129402957]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 texture = SubResource("AtlasTexture_nr05l")
 
-[node name="Label" type="Label" parent="VBoxContainer/ChestController/LabelBackground"]
+[node name="Label" type="Label" parent="VBoxContainer/ChestController/LabelBackground" unique_id=1445122775]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -277,7 +277,7 @@ theme_override_fonts/font = ExtResource("7_borl1")
 theme_override_font_sizes/font_size = 30
 text = "Chest"
 
-[node name="NextChestButton" type="TextureButton" parent="VBoxContainer/ChestController"]
+[node name="NextChestButton" type="TextureButton" parent="VBoxContainer/ChestController" unique_id=2118924204]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_borl1")
@@ -285,11 +285,11 @@ texture_pressed = SubResource("AtlasTexture_7m4tv")
 texture_hover = SubResource("AtlasTexture_edvgk")
 stretch_mode = 1
 
-[node name="LegsController" type="HBoxContainer" parent="VBoxContainer"]
+[node name="LegsController" type="HBoxContainer" parent="VBoxContainer" unique_id=352932020]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="PreviousLegsButton" type="TextureButton" parent="VBoxContainer/LegsController"]
+[node name="PreviousLegsButton" type="TextureButton" parent="VBoxContainer/LegsController" unique_id=1487997759]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_ako4q")
@@ -297,12 +297,12 @@ texture_pressed = SubResource("AtlasTexture_afg0v")
 texture_hover = SubResource("AtlasTexture_cnjwq")
 stretch_mode = 0
 
-[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/LegsController"]
+[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/LegsController" unique_id=1854423743]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 texture = SubResource("AtlasTexture_nr05l")
 
-[node name="Label" type="Label" parent="VBoxContainer/LegsController/LabelBackground"]
+[node name="Label" type="Label" parent="VBoxContainer/LegsController/LabelBackground" unique_id=605003734]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -320,7 +320,7 @@ theme_override_fonts/font = ExtResource("7_borl1")
 theme_override_font_sizes/font_size = 30
 text = "Legs"
 
-[node name="NextLegsButton" type="TextureButton" parent="VBoxContainer/LegsController"]
+[node name="NextLegsButton" type="TextureButton" parent="VBoxContainer/LegsController" unique_id=1467824880]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_borl1")
@@ -328,11 +328,11 @@ texture_pressed = SubResource("AtlasTexture_7m4tv")
 texture_hover = SubResource("AtlasTexture_edvgk")
 stretch_mode = 1
 
-[node name="FeetController" type="HBoxContainer" parent="VBoxContainer"]
+[node name="FeetController" type="HBoxContainer" parent="VBoxContainer" unique_id=1211159021]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="PreviousFeetButton" type="TextureButton" parent="VBoxContainer/FeetController"]
+[node name="PreviousFeetButton" type="TextureButton" parent="VBoxContainer/FeetController" unique_id=1073536322]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_ako4q")
@@ -340,12 +340,12 @@ texture_pressed = SubResource("AtlasTexture_afg0v")
 texture_hover = SubResource("AtlasTexture_cnjwq")
 stretch_mode = 0
 
-[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/FeetController"]
+[node name="LabelBackground" type="TextureRect" parent="VBoxContainer/FeetController" unique_id=2107601044]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 texture = SubResource("AtlasTexture_nr05l")
 
-[node name="Label" type="Label" parent="VBoxContainer/FeetController/LabelBackground"]
+[node name="Label" type="Label" parent="VBoxContainer/FeetController/LabelBackground" unique_id=441963804]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -363,7 +363,7 @@ theme_override_fonts/font = ExtResource("7_borl1")
 theme_override_font_sizes/font_size = 30
 text = "Feet"
 
-[node name="NextFeetButton" type="TextureButton" parent="VBoxContainer/FeetController"]
+[node name="NextFeetButton" type="TextureButton" parent="VBoxContainer/FeetController" unique_id=1646773983]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_borl1")
@@ -371,7 +371,7 @@ texture_pressed = SubResource("AtlasTexture_7m4tv")
 texture_hover = SubResource("AtlasTexture_edvgk")
 stretch_mode = 1
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1455242151]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

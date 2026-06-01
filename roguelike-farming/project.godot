@@ -21,7 +21,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalEventBus="*res://Scripts/eventBus.gd"
+Game2="*uid://bgxp26a655mtr"
+SceneManager_new="*uid://dedcw86ykq67j"
+GlobalEventBus="*res://Scripts/util/eventBus.gd"
 GlobalPersesistance="*res://Scripts/Persesistance.gd"
 GlobalPlayerInventory="*res://Scripts/data/playerInventory.gd"
 CharacterAppearance="*res://Scripts/character_appearance.gd"

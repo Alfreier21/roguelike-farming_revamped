@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lillh2jh2lkq"]
 
-[ext_resource type="Script" uid="uid://dqynbhk8xr3aa" path="res://SkillPointButton.gd" id="2_ke88e"]
+[ext_resource type="Script" uid="uid://dqynbhk8xr3aa" path="res://Scripts/SkillTreeScripts/SkillTreeUtils/SkillPointButton.gd" id="2_ke88e"]
 
 [node name="SkillTreeButton" type="TextureButton" unique_id=2053264119]
 self_modulate = Color(0.49354547, 0.49354553, 0.49354535, 1)

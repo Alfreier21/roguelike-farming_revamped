@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://djob1qkdy161t"]
 
-[ext_resource type="Script" uid="uid://b3n35htcbrsey" path="res://Scenes/SkillTreeStuff/SkillDescription.gd" id="1_o30ro"]
+[ext_resource type="Script" uid="uid://b3n35htcbrsey" path="res://Scripts/SkillTreeScripts/SkillTreeUtils/SkillDescription.gd" id="1_o30ro"]
 [ext_resource type="PackedScene" uid="uid://beco1yhl0kiyf" path="res://Scenes/SkillTreeStuff/itemPreview.tscn" id="2_kgi3o"]
 
 [node name="SkillDescription" type="Panel" unique_id=384050844]

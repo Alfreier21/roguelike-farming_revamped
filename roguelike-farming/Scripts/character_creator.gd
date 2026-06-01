@@ -56,4 +56,4 @@ func _on_next_accessory_button_pressed() -> void:
 
 
 func _on_texture_button_pressed() -> void:
-	get_tree().change_scene_to_file(farming_base_path)
+	Game2.changeToGameState(GameManager.GAMESTATE.BASE)

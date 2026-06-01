@@ -15,7 +15,7 @@ func _on_area_entered(area: Area2D) -> void:
 		attack.critical = critical
 		attack.knockback_power = knockback_power
 		attack.damage_position = damage_position
-		if (self.get_parent() is Enemy):
-			if(area.get_parent() is Player):
-				GlobalPlayerDataCollector.playerGotHit(attack_damage, "basicEnemy", area.health_component.current_health)
+		#if (self.get_parent() is Enemy):
+			#if(area.get_parent() is Player):
+				#GlobalPlayerDataCollector.playerGotHit(attack_damage, "basicEnemy", area.health_component.current_health)
 		area.damage(attack)

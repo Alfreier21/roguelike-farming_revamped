@@ -2,7 +2,8 @@ class_name DungeonBuilder2
 extends Node
 
 @onready var camera_2d: Camera2D = $Camera2D
-#@onready var background_for_test: Panel = $"Background for Test"
+@onready var dungeon_grid_2: DungeonGrid2 = $DungeonGrid2
+
 
 #selectable Tiles should be able 
 var dragging_tile : bool = false
@@ -40,3 +41,10 @@ func _on_tile_selection_dragging_tile() -> void:
 
 func _on_tile_selection_stopped_dragging_tile() -> void:
 	dragging_tile = false
+
+
+func _on_button_pressed() -> void:
+	#exportAllRooms.emit(dungeon_frame.allRooms, dungeon_frame.startRoom)
+	Game2.build_dungeon = dungeon_grid_2.getAllRoomTiles()
+	Game2.start_room = dungeon_grid_2.startRoom
+	Game2.changeToGameState(GameManager.GAMESTATE.DUNGEON_TRAVERSAL)
