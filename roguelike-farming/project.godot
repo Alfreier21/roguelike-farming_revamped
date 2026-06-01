@@ -23,7 +23,7 @@ config/icon="res://icon.svg"
 
 Game2="*uid://bgxp26a655mtr"
 SceneManager_new="*uid://dedcw86ykq67j"
-GlobalEventBus="*res://Scripts/eventBus.gd"
+GlobalEventBus="*res://Scripts/util/eventBus.gd"
 GlobalPersesistance="*res://Scripts/Persesistance.gd"
 GlobalPlayerInventory="*res://Scripts/data/playerInventory.gd"
 CharacterAppearance="*res://Scripts/character_appearance.gd"

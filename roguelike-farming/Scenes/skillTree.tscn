@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bcfx4ao14l4cs"]
 
-[ext_resource type="Script" uid="uid://b6gh4e1gam46l" path="res://skillTree.gd" id="1_iv0no"]
+[ext_resource type="Script" uid="uid://b6gh4e1gam46l" path="res://Scripts/SkillTreeScripts/skillTree.gd" id="1_iv0no"]
 [ext_resource type="PackedScene" uid="uid://lillh2jh2lkq" path="res://Scenes/SkillTreeStuff/SkillTreeButton.tscn" id="2_vf415"]
 [ext_resource type="Texture2D" uid="uid://divljun6q4u1r" path="res://Sprites/skillTreeSprites/DungeonFrameSkillPoint.png" id="3_e7jyk"]
 [ext_resource type="Resource" uid="uid://e3ee7kwwvg1c" path="res://Resources/skilltreeResources/finishedSkillPoint/DungeonFrameExpansionX1.tres" id="4_rss7w"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://r6m3dp53kiuj" path="res://Scripts/farming_base.gd" id="1_5f142"]
 [ext_resource type="PackedScene" uid="uid://bdrnscehyw88x" path="res://Scenes/crops/carrot.tscn" id="2_5f142"]
 [ext_resource type="PackedScene" uid="uid://i02wi8njxgrb" path="res://Scenes/player.tscn" id="3_5f142"]
-[ext_resource type="PackedScene" uid="uid://bcfx4ao14l4cs" path="res://skillTree.tscn" id="4_1kfoo"]
+[ext_resource type="PackedScene" uid="uid://bcfx4ao14l4cs" path="res://Scenes/skillTree.tscn" id="4_1kfoo"]
 [ext_resource type="Texture2D" uid="uid://dej73c1orusej" path="res://tileMap/farming_base/HomeBaseTiles.png" id="5_rnyqk"]
 [ext_resource type="Texture2D" uid="uid://tsyg5404cg1p" path="res://tileMap/farming_base/FarmLand_Wet_Tile.png" id="6_rnyqk"]
 [ext_resource type="PackedScene" uid="uid://dku1thhibkrvx" path="res://Scenes/pickableItem.tscn" id="9_rnyqk"]
