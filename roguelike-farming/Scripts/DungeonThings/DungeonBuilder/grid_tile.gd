@@ -9,6 +9,10 @@ extends TextureButton
 @onready var tile_visualisation: TileVisualisation = $TileVisualisation
 
 @export var generated_tile : bool = false
+@export var tile_data: Tile_Data:
+	set(new_tile):
+		tile_data = new_tile
+		tile_visualisation.setTile(tile_data)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,5 +24,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func setTile(tile_data: Tile_Data) -> void:
-	tile_visualisation.setTile(tile_data)
+func setTile(new_data: Tile_Data) -> void:
+	tile_data = new_data

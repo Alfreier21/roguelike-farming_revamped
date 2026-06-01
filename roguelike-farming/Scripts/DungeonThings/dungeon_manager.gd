@@ -5,7 +5,7 @@ extends Node2D
 ##This class should know how the rooms are arranged and in which room the player currently is. 
 
 @onready var dungeonrooms: Node2D = $Dungeonrooms
-@onready var test_player: Player = $"../TestPlayer"
+@onready var test_player: Player = $Player
 #for prototype to show what happened: example tried walking through door with no corresponding entrance
 @onready var info: Panel = $Info
 @onready var label: Label = $Info/Label
@@ -30,9 +30,11 @@ var traversedRooms: Array[Vector2i] = []
 # so here would be generated a seperate dictionary with the vector2 and the instanciated Scene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalEventBus.subscribe(self)
+	generateDungeon()
 	playerTransformation = test_player.transform
 	playerTransformation.origin = Vector2(126,126)
-	GlobalEventBus.subscribe(self)
+	
 	pass # Replace with function body.
 
 
@@ -63,13 +65,16 @@ func gatherDataTraversedRooms() -> void:
 	pass
 
 
-func _on_build_dungeon_screen_export_all_rooms(dict: Dictionary, startRoom: Vector2i) -> void:
+func generateDungeon() -> void:
+	#this should have the coords in the grid as key and the tile_data as value. 
+	var dict: Dictionary = Game2.build_dungeon
+	var startRoom: Vector2i = Game2.start_room
 	print("got the signal")
 	posOfPlayer = startRoom
 	var placedTiles : int
 	#here i would have to loop through the key value pairs and generate the scenes
 	for key in dict.keys():
-		var tileData = dict.get(key).tileData
+		var tileData = dict.get(key)
 		if (tileData != null):
 			placedTiles += 1
 			var newRoom = templateRoom.instantiate() as DungeonRoom

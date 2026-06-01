@@ -135,3 +135,10 @@ func placePOITiles(takenPos: Array[Vector2i]) -> void:
 			poiTile.currentEntrances = generateEntrances()
 		placePregeneratedTiles(poiTile, pos)
 	pass
+
+
+func getAllRoomTiles() -> Dictionary:
+	var allTiles: Dictionary = {}
+	for key in allRooms.keys():
+		allTiles.set(key, allRooms.get(key).tile_data)
+	return allTiles

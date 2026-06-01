@@ -27,6 +27,14 @@ layout_mode = 0
 mouse_filter = 2
 mouse_behavior_recursive = 2
 
+[node name="Button" type="Button" parent="TileSelection" unique_id=1892764499]
+offset_left = 562.0
+offset_top = 3.0
+offset_right = 637.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 8
+text = "submit Dungeon"
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1645804245]
 position = Vector2(320, 180)
 
@@ -35,3 +43,4 @@ position = Vector2(105, 75)
 
 [connection signal="draggingTile" from="TileSelection" to="." method="_on_tile_selection_dragging_tile"]
 [connection signal="stoppedDraggingTile" from="TileSelection" to="." method="_on_tile_selection_stopped_dragging_tile"]
+[connection signal="pressed" from="TileSelection/Button" to="." method="_on_button_pressed"]

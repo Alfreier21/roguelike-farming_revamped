@@ -7,6 +7,9 @@ extends Node
 
 signal gamestateChanged(new_state: GAMESTATE)
 
+@export var build_dungeon: Dictionary
+@export var start_room : Vector2i
+
 #so when new state is set, the signal gets emitted automatically
 @export var current_state: GAMESTATE:
 	set(new_state):
