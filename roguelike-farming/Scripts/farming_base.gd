@@ -70,11 +70,11 @@ func is_crop(node: Node) -> bool:
 
 
 func _on_dungeon_button_pressed() -> void:
-	get_tree().change_scene_to_file(dungeon_scene_path)
+	Game2.changeToGameState(GameManager.GAMESTATE.DUNGEON_BUILDER)
 
 
 func _on_skilltree_button_pressed() -> void:
-	get_tree().change_scene_to_packed(skilltree_scene)
+	Game2.changeToGameState(GameManager.GAMESTATE.SKILL_TREE)
 
 
 func _on_button_2_pressed() -> void:

@@ -21,6 +21,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Game2="*uid://bgxp26a655mtr"
+SceneManager_new="*uid://dedcw86ykq67j"
 GlobalEventBus="*res://Scripts/eventBus.gd"
 GlobalPersesistance="*res://Scripts/Persesistance.gd"
 GlobalPlayerInventory="*res://Scripts/data/playerInventory.gd"

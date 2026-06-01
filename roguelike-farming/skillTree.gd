@@ -42,4 +42,4 @@ func generateSkillDictionary() -> void:
 
 
 func _on_back_pressed() -> void:
-	get_tree().call_deferred("change_scene_to_file", "res://Scenes/farming_base.tscn")
+	Game2.changeToGameState(GameManager.GAMESTATE.BASE)

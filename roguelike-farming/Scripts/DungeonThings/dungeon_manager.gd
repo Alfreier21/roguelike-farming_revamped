@@ -56,10 +56,10 @@ func gatherDataForAnalysis(placedTiles: int) -> void:
 		tilesInPlayerInventory += value
 	tilesInPlayerInventory += tilesPlacedByPlayer
 	var freeTiles = GlobalPlayerInventory.playerData.dungeonDimension.x * GlobalPlayerInventory.playerData.dungeonDimension.y - tilesPlacedByGame
-	GlobalPlayerDataCollector.tilesPlacedVsPossibelTiles(tilesPlacedByPlayer, tilesInPlayerInventory, freeTiles)
+	#GlobalPlayerDataCollector.tilesPlacedVsPossibelTiles(tilesPlacedByPlayer, tilesInPlayerInventory, freeTiles)
 
 func gatherDataTraversedRooms() -> void: 
-	GlobalPlayerDataCollector.traversedRooms(traversedRooms.size(), allDungeonScenes.values().size() - allDungeonScenes.values().count(null))
+	#GlobalPlayerDataCollector.traversedRooms(traversedRooms.size(), allDungeonScenes.values().size() - allDungeonScenes.values().count(null))
 	pass
 
 
