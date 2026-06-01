@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dl3b5bhnb2st1"]
+
+[ext_resource type="Script" uid="uid://0ce66bn323o0" path="res://Scripts/DungeonThings/DungeonBuilder/placeable_tile_2.gd" id="1_jtfwq"]
+[ext_resource type="PackedScene" uid="uid://bvn8ulb8gj2af" path="res://Scenes/DungeonThings/DungeonBuilder/tile_visualisation.tscn" id="2_rkyrd"]
+
+[node name="PlaceableTile2" type="TextureButton" unique_id=235767744]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+pivot_offset = Vector2(16, 16)
+size_flags_horizontal = 4
+mouse_behavior_recursive = 2
+script = ExtResource("1_jtfwq")
+
+[node name="TileVisualisation" parent="." unique_id=649310393 instance=ExtResource("2_rkyrd")]
+
+[node name="Count" type="Label" parent="." unique_id=398748793]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 32.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 8
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

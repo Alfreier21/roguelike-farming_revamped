@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bcbs2jhmts624"]
+
+[ext_resource type="Script" uid="uid://bho7xb3gaev6s" path="res://Scripts/DungeonThings/DungeonBuilder/dungeon_builder_2.gd" id="1_fx6j6"]
+[ext_resource type="PackedScene" uid="uid://cq5ehxd445ccs" path="res://Scenes/DungeonThings/DungeonBuilder/dungeon_grid_2.tscn" id="2_aexrw"]
+[ext_resource type="Script" uid="uid://di1neu2p0jqo7" path="res://Scenes/DungeonThings/DungeonBuilder/tile_selection.gd" id="2_cu37x"]
+[ext_resource type="PackedScene" uid="uid://dl3b5bhnb2st1" path="res://Scenes/DungeonThings/DungeonBuilder/placeable_tile_2.tscn" id="2_ojyk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojyk3"]
+bg_color = Color(0.6, 0.22745098, 0.6, 1)
+
+[node name="DungeonBuilder2" type="Node" unique_id=1197291144]
+script = ExtResource("1_fx6j6")
+
+[node name="TileSelection" type="CanvasLayer" parent="." unique_id=54679029]
+script = ExtResource("2_cu37x")
+placable_tile = ExtResource("2_ojyk3")
+
+[node name="Panel" type="Panel" parent="TileSelection" unique_id=1050820919]
+offset_top = 280.0
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ojyk3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TileSelection/Panel" unique_id=797961647]
+layout_mode = 0
+mouse_filter = 2
+mouse_behavior_recursive = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1645804245]
+position = Vector2(320, 180)
+
+[node name="DungeonGrid2" parent="." unique_id=1578777587 instance=ExtResource("2_aexrw")]
+position = Vector2(105, 75)
+
+[connection signal="draggingTile" from="TileSelection" to="." method="_on_tile_selection_dragging_tile"]
+[connection signal="stoppedDraggingTile" from="TileSelection" to="." method="_on_tile_selection_stopped_dragging_tile"]
