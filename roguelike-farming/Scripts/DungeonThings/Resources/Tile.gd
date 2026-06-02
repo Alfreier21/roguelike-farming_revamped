@@ -3,6 +3,8 @@ extends Resource
 
 ##represents a Tile. Is called "Tile_Data" because "TileData" is a class of Godot
 
+signal rotatedTile()
+
 @export var name: String
 
 @export var entranceComposition: ENTRANCE_COMPOSITIONS
@@ -55,3 +57,5 @@ func is_equal(other: Tile_Data) -> bool:
 
 func rotateTile() -> void: 
 	currentEntrances =  (currentEntrances << 1) | ((currentEntrances & Tile_Data.WEST) >> 3)
+	rotatedTile.emit()
+	

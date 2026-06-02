@@ -8,6 +8,7 @@ extends TextureButton
 @onready var tile_visualisation: TileVisualisation = $TileVisualisation
 @onready var count: Label = $Count
 
+@export var tile_data: Tile_Data
 var is_dragging = false
 
 var snapback_pos : Vector2 
@@ -21,10 +22,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func getOwnTileData() -> Tile_Data:
+	return tile_visualisation.tile_data
 
 func setTile(data: Tile_Data) -> void:
-	tile_visualisation.setTile(data)
-
+	tile_data = data
+	tile_data.rotatedTile.connect(updateVisualisation)
+	updateVisualisation()
+	
+func updateVisualisation() -> void: 
+	tile_visualisation.updateVisualisation(tile_data)
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and is_dragging:
@@ -45,7 +52,8 @@ func _on_button_up() -> void:
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.double_click:
-			tile_visualisation.rotateTile()
+			print("Should rotate now")
+			tile_data.rotateTile()
 
 func getGridTile() -> void: 
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -58,4 +66,5 @@ func getGridTile() -> void:
 		var s: GridTile = slot.collider.get_parent() as GridTile
 		if s != null:
 			#logic to place the specific tile
+			s.setTile(getOwnTileData().duplicate())
 			print("Found free grid Space")

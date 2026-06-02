@@ -12,7 +12,7 @@ extends TextureButton
 @export var tile_data: Tile_Data:
 	set(new_tile):
 		tile_data = new_tile
-		tile_visualisation.setTile(tile_data)
+		tile_visualisation.updateVisualisation(tile_data)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -26,3 +26,17 @@ func _process(delta: float) -> void:
 
 func setTile(new_data: Tile_Data) -> void:
 	tile_data = new_data
+	tile_data.rotatedTile.connect(updateVisualisation)
+
+func updateVisualisation() -> void: 
+	tile_visualisation.updateVisualisation(tile_data)
+
+func _on_gui_input(event: InputEvent) -> void: 
+	if event is InputEventMouseButton and event.is_pressed() and !generated_tile:
+		match event.button_index:
+			MOUSE_BUTTON_LEFT:
+				if tile_data:
+					print("should Rotate now")
+					tile_data.rotateTile()
+			MOUSE_BUTTON_RIGHT:
+				tile_data = null

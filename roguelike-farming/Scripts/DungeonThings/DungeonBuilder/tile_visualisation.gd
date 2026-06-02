@@ -19,12 +19,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func setTile(data: Tile_Data) -> void: 
+func updateVisualisation(data: Tile_Data) -> void: 
 	tile_data = data
 	createVisualisation() 
 
-func rotateTile() -> void: 
-	tile_data.rotateTile()
 
 
 func resetTileVisualisation() -> void:
@@ -33,10 +31,12 @@ func resetTileVisualisation() -> void:
 	removeAllEntrances()
 
 func createVisualisation() -> void:
-	showEntrances()
-	showExtras()
-	background.texture = tile_data.tileStyle.previewTileBackground
-	pass
+	if tile_data:
+		showEntrances()
+		showExtras()
+		background.texture = tile_data.tileStyle.previewTileBackground
+	else: 
+		resetTileVisualisation()
 
 func showEntrances() -> void: 
 	removeAllEntrances()
